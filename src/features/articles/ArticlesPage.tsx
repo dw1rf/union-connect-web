@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-
+import Link from "next/link";
 import type { Article } from "../../domain/models";
 
 type ArticlesPageProps = {
@@ -65,7 +65,10 @@ export function ArticlesPage({ articles }: ArticlesPageProps) {
         <ul>
           {filteredArticles.map((article) => (
             <li key={article.id}>
-              {article.title} - {ArticlesStatusMap[article.status]}
+              <Link href={`/articles/${article.id}`}>
+              {article.title} 
+              </Link>{" "}
+              - {ArticlesStatusMap[article.status]}
             </li>
           ))}
         </ul>

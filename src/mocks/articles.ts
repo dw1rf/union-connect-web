@@ -1,6 +1,6 @@
 import { Article, ArticleVersion } from "../domain/models";
 
-export const articlesMock: Article[] = [
+export const articlesMocks: Article[] = [
     {
     id: "1",
     title: "Принтер чеков",
